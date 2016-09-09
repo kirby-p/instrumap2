@@ -11,14 +11,16 @@
     <body ng-controller="InstrumentCtrl">
         <h1>Instrumap</h1>
 <!--         <div ng-click="go('/instruments/' + instrument.url)"> -->
-        <div ng-click="go('/instrumap/' + instrument.url)">
-
-            <ul>
-                <li ng-repeat="instrument in instruments">
-                    {{ instrument.name }}
-                </li>
-            </ul>
-        </div>
+<!--         <div ng-click="go(instrument.name)">
+ -->
+<!--             <ul>
+ -->                <div ng-repeat="instrument in instruments">
+                        <div ng-click="go('/instruments/' + instrument.name)">
+                            {{ instrument.name }}
+                        </div>
+                    </div>
+<!--             </ul>
+ -->        </div>
     </body>
 
 </html>
