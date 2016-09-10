@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html ng-app="instrumentApp">
+<html lang="en" ng-app="instrumentApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Instrumap</title>
+<!--     <link rel="stylesheet" href="style.css" />
+ -->    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="script.js"></script>  
+  </head>
+  <body ng-controller="mainController">
+    <div class="instrumentButtons">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#clarinet">Clarinet</a></li>
+        <li><a href="#trumpet">Trumpet</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <div ng-view></div>
+    </div>
 
-    <head>
-        <script data-require="angular.js@*" data-semver="1.5.8" 
-            src="https://code.angularjs.org/1.5.8/angular.js"></script>
-        <link rel="stylesheet" href="style.css" />
-        <script src="./app/app.module.js"></script>
-    </head>
-
-    <body ng-controller="InstrumentCtrl">
-        <h1>Instrumap</h1>
-<!--         <div ng-click="go('/instruments/' + instrument.url)"> -->
-<!--         <div ng-click="go(instrument.name)">
- -->
-<!--             <ul>
- -->                <div ng-repeat="instrument in instruments">
-                        <div ng-click="go('/instruments/' + instrument.name)">
-                            {{ instrument.name }}
-                        </div>
-                    </div>
-<!--             </ul>
- -->        </div>
-    </body>
+<!--           <div ng-repeat="instrument in instruments">
+            <div ng-click="go('/instruments/' + instrument.name)">
+              {{ instrument.name }}
+            </div>
+          </div>
+    <instrument-list></instrument-list>  
+ -->  
+  </body>
 
 </html>

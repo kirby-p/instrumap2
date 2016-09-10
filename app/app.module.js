@@ -1,26 +1,32 @@
-var instrumentApp = angular.module ('instrumentApp', []);
+'use strict';
 
-instrumentApp.controller ('InstrumentCtrl', function ($scope, $location) {
-	$scope.instruments = [
-		{
-			name: 'Clarinet', 
-			url: 'clarinet'
-		},
-		{
-			name: 'Trumpet', 
-			url: 'trumpet'
-		},
-		{
-			name: 'Guitar', 
-			url: 'guitar'
-		}
-	];
+angular.module('instrumentApp', [
+	'instrumentList'
+]);
 
-	$scope.go = function (path) {
-		$location.path(path);
-		console.log(path);
-	};
+// var instrumentApp = angular.module ('instrumentApp', []);
 
-});
+// instrumentApp.controller ('InstrumentCtrl', function ($scope, $location) {
+// 	$scope.instruments = [
+// 		{
+// 			name: 'Clarinet', 
+// 			url: 'clarinet'
+// 		},
+// 		{
+// 			name: 'Trumpet', 
+// 			url: 'trumpet'
+// 		},
+// 		{
+// 			name: 'Guitar', 
+// 			url: 'guitar'
+// 		}
+// 	];
+
+// 	$scope.go = function (path) {
+// 		$location.path(path);
+// 		console.log(path);
+// 	};
+
+// });
 
 
