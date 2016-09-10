@@ -1,6 +1,6 @@
-var instrumentApp = angular.module('instrumentApp', ['ngRoute']);
+var app = angular.module('instrumentApp', ['ngRoute']);
 
-instrumentApp.config(function($routeProvider) {
+app.config(function($routeProvider) {
 	$routeProvider
 		.when('/', {
 			templateUrl : 'pages/home.html',
@@ -16,25 +16,34 @@ instrumentApp.config(function($routeProvider) {
 			templateUrl : 'pages/trumpet.html',
 			controller 	: 'trumpetController'
 		})
-
-		// .when('/guitar', {
-		// 	templateUrl : 'pages/guitar.html',
-		// 	controller 	: 'guitarController'
-		// });
 });
 
-instrumentApp.controller('mainController', function($scope) {
+app.controller('mainController', function($scope) {
 	$scope.message = 'Welcome to the main page!';
 });
 
-instrumentApp.controller('clarinetController', function($scope) {
+app.controller('clarinetController', function($scope) {
 	$scope.message = 'You chose the clarinet!';
+	$scope.notelist = [
+		{ name: "C" },
+		{ name: "D" },
+		{ name: "E" }];
+	// var noteButtonsArray = [];
+
+	// for(x = 0; x < notes.length; x++) {
+	// 	noteButtonsArray.push('<li><button onclick="bla">' + notes[x] + '</button></li>');
+	// }
+
+	// var noteButtons = noteButtonsArray.join("");
+	// $scope.noteButtons = noteButtons;
+	// console.log(noteButtons);
+
 });
 
-instrumentApp.controller('trumpetController', function($scope) {
+// app.factory('ClarinetNotes', function() {
+// 	console.log('')
+// });
+
+app.controller('trumpetController', function($scope) {
 	$scope.message = 'Trumpet is what you chose';
 });
-
-// instrumentApp.controller('guitarController', function($scope) {
-// 	$scope.message = 'Excellent choice, the guitar';
-// });

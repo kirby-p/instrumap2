@@ -1,0 +1,13 @@
+.hidden {
+	display: none;
+}
+
+img.base {
+	float: right;
+	position: relative;
+}
+
+img.overlay {
+	position: absolute;
+	right: 8px;
+}
