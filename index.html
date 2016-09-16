@@ -7,7 +7,8 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
-    <script src="script.js"></script>  
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
   </head>
   <body ng-controller="mainController">
     <div class="instrumentButtons">
@@ -20,6 +21,9 @@
     <div id="main">
       <div ng-view></div>
     </div> 
+    <script src="script.js"></script>  
+    <script src="./app/scripts/clarinet-script.js"></script>  
+
   </body>
 
 </html>

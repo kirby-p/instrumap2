@@ -4,11 +4,12 @@
 	<p>{{ message }}</p>
     <div ng-controller="clarinetController" class="noteButtons">
     	<ul ng-repeat='notes in notelist'>
-    		<li><button onclick="">{{ notes.name }}</button></li>
+    		<li><button class="clarinet-note-buttons" id="clarinet-{{notes.name}}">{{ notes.name }}</button></li>
     	</ul>
 
     </div>
-
-	<img ng-src="./assets/images/clarinet/clarinet-base.png" class="base" />
-	<img ng-src="./assets/images/clarinet/clarinet-note-C.png" class="overlay" />
+    <div id="instrument-display">
+		<img ng-src="./assets/images/clarinet/clarinet-base.png" class="base" />
+		<img ng-src="./assets/images/clarinet/clarinet-note-C.png" id="clarinet-C" class="overlay hidden" />
+	</div>
 </div>
