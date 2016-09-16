@@ -2,6 +2,10 @@
 	display: none;
 }
 
+/*#noteButtons, #instrument-display {
+	display: inline-block;
+}
+*/
 img.base {
 	float: right;
 	position: relative;

@@ -3,13 +3,13 @@ $(document).ready(function() {
 
 	$(".clarinet-note-buttons").on("click", function() {
 	  switch($(this).attr("id")) {
-	    case "clarinet-C":
-	      console.log("C note for Clarinet");
+	    case "button-clarinet-C":
+	      $("#img-clarinet-C").css("display", "block");
 	      break;
-	    case "clarinet-D":
+	    case "button-clarinet-D":
 	      console.log("D note for Clarinet");
 	      break;    
-	  	case "clarinet-E":
+	  	case "button-clarinet-E":
 	      console.log("E note for Clarinet");
 	      break;
 	  }
