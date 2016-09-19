@@ -2,16 +2,57 @@
 	display: none;
 }
 
-/*#noteButtons, #instrument-display {
+.content {
+	text-align: center;
+}
+li {
+	list-style-type: none;
 	display: inline-block;
 }
-*/
-img.base {
-	float: right;
+
+.note-buttons {
+	width: 50px;
+	height: 100px;
+	display: inline-block;
+	float: left;
+	margin: auto;
+}
+
+.instrumentButtons {
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	margin: 0 auto;
+}
+
+#keyboardButtons {
+	position: relative;
+	height: 200px;
+	width: 700px;
+	margin: auto;
+	text-align: center;
+}
+
+#instrument-display {
+	clear: both;
+	margin: auto;
+	width: 400px;
+	border-style: solid;
 	position: relative;
 }
 
-img.overlay {
+img.base, img.overlay {
+	max-width: 100%;
+}
+
+/*img.overlay {
 	position: absolute;
-	right: 8px;
+}
+*/
+.buttonsOverlay {
+	position: absolute;
+	top: 0;
+	border-style: dashed;
+
 }

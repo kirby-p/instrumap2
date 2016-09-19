@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
 		})
 
 		.when('/clarinet', {
-			templateUrl : 'pages/clarinet.html',
+			templateUrl : 'pages/basic-template.html',
 			controller 	: 'clarinetController'
 		})
 
@@ -18,32 +18,39 @@ app.config(function($routeProvider) {
 		})
 });
 
+// function MainCtrl($scope, $location) {
+// 	$scope.setRoute = function(route) {
+// 		$location.path(route);
+// 	}
+// }
+
 app.controller('mainController', function($scope) {
+	$scope.title = 'Home';
 	$scope.message = 'Welcome to the main page!';
 });
 
-app.controller('clarinetController', function($scope) {
-	$scope.message = 'You chose the clarinet!';
+app.controller('keyboardController', function($scope) {
 	$scope.notelist = [
-		{ name: "C" },
+		{ name: "C",
+		  type: "natural" },
+	  	{ name: "C# / Db",
+	  	  type: "enharmonic" },
 		{ name: "D" },
-		{ name: "E" }];
-	// var noteButtonsArray = [];
-
-	// for(x = 0; x < notes.length; x++) {
-	// 	noteButtonsArray.push('<li><button onclick="bla">' + notes[x] + '</button></li>');
-	// }
-
-	// var noteButtons = noteButtonsArray.join("");
-	// $scope.noteButtons = noteButtons;
-	// console.log(noteButtons);
-
+		{ name: "E" },
+		{ name: "F" },
+		{ name: "G" },
+		{ name: "A" },
+		{ name: "B" },];
 });
 
-// app.factory('ClarinetNotes', function() {
-// 	console.log('')
-// });
+app.controller('clarinetController', function($scope) {
+	$scope.title = 'Clarinet';
+	$scope.instrument = 'clarinet';
+	$scope.message = 'You chose the clarinet!';
+});
 
 app.controller('trumpetController', function($scope) {
+	$scope.title = "Trumpet";
+	$scope.instrument = "trumpet";
 	$scope.message = 'Trumpet is what you chose';
 });

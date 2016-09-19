@@ -1,0 +1,21 @@
+<div class="content">
+	<h1>{{ title }}</h1>
+	
+	<p>You chose the {{ instrument }}!!!</p>
+    <div ng-controller="keyboardController" id="keyboardButtons">
+    	<ul>
+    		<li ng-repeat='notes in notelist'><button class="{{ instrument }}-note-buttons note-buttons" id="button-{{ instrument }}-{{notes.name}}">{{ notes.name }}</button></li>
+    	</ul>
+
+    </div>
+    <div id="instrument-display">
+		<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-base.png" class="base" />
+		<div class="buttonsOverlay">
+<!-- 			<img ng-repeat='notes in notelist' ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-{{ notes.name }}.png" id="img-{{ instrument }}- {{ notes.name }}" class="overlay hidden {{ notes.type }}" />
+ -->			<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-C.png" id="img-{{ instrument }}-C" class="overlay hidden" />
+			<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-D.png" id="img-{{ instrument }}-D" class="overlay hidden" />	
+			<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-E.png" id="img-{{ instrument }}-E" class="overlay hidden" />	
+			<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-F.png" id="img-{{ instrument }}-F" class="overlay hidden" />	
+		</div>
+	</div>
+</div>
