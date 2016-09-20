@@ -50,7 +50,14 @@ $(document).ready(function() {
 		    	$("#img-clarinet-B").show();
 				break;
 
-
+		// angularLoad.loadScript('./app/scripts/clarinet-script.js').then(function() {
+		//     // Script loaded succesfully.
+		//     // We can now start using the functions from someplugin.js
+		//     console.log("Success!");
+		// }).catch(function() {
+		//     // There was some error loading the script. Meh
+		//     console.log("Boo!");
+		// });
 			// var notes = {
 			// 	"button-clarinet-C": "$('#img-clarinet-C').show();",
 			// 	"button-clarinet-D": "$('#img-clarinet-D').show();"

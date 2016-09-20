@@ -13,7 +13,8 @@
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-
+    <script src="//cdn.jsdelivr.net/script.js/0.1/script.js"></script>
+    <script src="/app/scripts/require.js"></script>
   </head>
   <body ng-controller="mainController">
     <div id="menu" class="instrumentButtons">
@@ -29,9 +30,10 @@
     <div id="main">
       <div ng-view></div>
     </div> 
-    <script src="script.js"></script>  
-    <script src="./app/scripts/clarinet-script.js"></script>  
-
+    <script src="script.js"></script> 
+    <script src="node_modules/angular-load/angular-load.js"></script> 
+<!--     <script src="./app/scripts/clarinet-script.js"></script>  
+ -->
   </body>
 
 </html>
