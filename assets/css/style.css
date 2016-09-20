@@ -2,6 +2,26 @@
 	display: none;
 }
 
+.center {
+	width: 45%;
+	float: left;
+}
+.window {
+	padding: 20px;
+	background-color: lightyellow;
+	overflow: auto;
+	width: 90%;
+	margin: auto;
+}
+
+#keyboardDisplay {
+	background-color: lightgreen;
+	padding: 35px 10px 20px 10px;
+	overflow: auto;
+	position: relative;
+	height: 100px;
+	white-space: nowrap;
+}
 .content {
 	text-align: center;
 }
@@ -11,11 +31,13 @@ li {
 }
 
 .note-buttons {
-	width: 50px;
+	width: 45px;
 	height: 100px;
 	display: inline-block;
-	float: left;
-	margin: auto;
+	border-radius: 8px;
+	background-color: #eee9e9;
+/*	float: left;
+	margin: auto;*/
 }
 
 .instrumentButtons {
@@ -26,24 +48,62 @@ li {
 	margin: 0 auto;
 }
 
-#keyboardButtons {
-	position: relative;
-	height: 200px;
-	width: 700px;
+.keyboardButtons {
+/*	position: relative;
+	height: 80px;
 	margin: auto;
 	text-align: center;
+	padding-top: 100px;
+	float: left;*/
+}
+
+.natural p {
+	color: red;
+	position: relative;
+	top: 30px;
+}
+
+.enharmonic p {
+	color: red;
+	position: relative;
+	top: 12px;
+}
+.enharmonic {
+	background-color: black;
+	position: relative;
+	width: 35px;
+	height: 70px;
+	color: white;
+	margin: 0 5px;
+	left: 22px;
+}
+
+.extraSpace {
+	margin-right: 50px;
+}
+#blackKeys {
+	position: absolute;
+	top: 30px;
 }
 
 #instrument-display {
-	clear: both;
-	margin: auto;
-	width: 400px;
-	border-style: solid;
-	position: relative;
+/*	margin: auto;
+	width: 50%;
+	height: auto;
+	border-style: dotted;
+	border-width: 3px;
+	position: relative;*/
+	background-color: lightblue;
+	overflow: auto;
 }
 
 img.base, img.overlay {
-	max-width: 100%;
+
+}
+
+img.base {
+	border-style: solid;
+	border-width: 2px;
 }
 
 /*img.overlay {
@@ -54,5 +114,6 @@ img.base, img.overlay {
 	position: absolute;
 	top: 0;
 	border-style: dashed;
-
+	border-width: 3px;
+	left: 3%;
 }
