@@ -1,8 +1,7 @@
 <div ng-controller="keyboardController" class="content">
-	<h1>{{ title }}</h1>
-	
-	<p>You chose the {{ instrument }}!!!</p>
 	<div class="window">
+		<h3>{{ title }}</h3>
+
 		<div id="keyboardDisplay" class="center">
  			<div class="keyboardButtons" id="blackKeys" ng-init="enharmonics=['C#', 'D#']">
  				<button ng-repeat='enharmonic in enharmonickeys' class="{{ instrument }}-note-buttons note-buttons enharmonic {{ enharmonic.space }}" id="button-{{ instrument }}-{{ enharmonic.name }}"><p>{{ enharmonic.name }}</p><p>{{ enharmonic.altname }}</p></button>

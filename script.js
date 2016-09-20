@@ -186,3 +186,12 @@ app.controller('trumpetController', function($scope) {
 	})
 
 });
+
+function openNav() {
+    document.getElementById("instrumapNav").style.height = "60%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("instrumapNav").style.height = "0%";
+}

@@ -4,36 +4,37 @@
     <meta charset="utf-8">
     <title>Instrumap</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
-    <!-- Latest compiled and minified CSS -->
-<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
- -->
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>    
+    <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" href="assets/css/style.css" />
-<!--     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script> -->
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/script.js/0.1/script.js"></script>
-    <script src="/app/scripts/require.js"></script>
-  </head>
+    <script src="https://use.fontawesome.com/79ce7b33b8.js"></script>
+<!--     <script src="/app/scripts/require.js"></script>
+ -->  </head>
   <body ng-controller="mainController">
-    <div id="menu" class="instrumentButtons">
-      <ul>
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/clarinet">Clarinet</a></li>
-        <li><a href="#/trumpet">Trumpet</a></li>
-      </ul>
-<!--       <a ng-click="setRoute('home')" class="btn">Home</a>
-      <a ng-click="setRoute('clarinet')" class="btn">Clarinet</a>
-      <a ng-click="setRoute('trumpet')" class="btn">Trumpet</a>
- -->    </div>
+    <div id="header">
+      <h1>Instrumap</h1>
+      <i class="fa fa-compass" aria-hidden="true" onclick="openNav()"></i>
+    </div>
+    <div id="instrumapNav" class="navoverlay">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <div class="overlay-content">
+        <a href="#/">Home</a>
+        <a href="#/clarinet">Clarinet</a>
+        <a href="#/trumpet">Trumpet</a>
+      </div>
+
+    </div>
     <div id="main">
       <div ng-view></div>
     </div> 
     <script src="script.js"></script> 
     <script src="node_modules/angular-load/angular-load.js"></script> 
-<!--     <script src="./app/scripts/clarinet-script.js"></script>  
- -->
   </body>
 
 </html>
