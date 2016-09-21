@@ -12,11 +12,11 @@ h2#menu {
 	font-size: 30px;
 }
 
-h3 {
+h3, a {
 	font-family: 'Great Vibes', cursive;
-	font-size: 30px;
-	position: absolute;
-	z-index: 2;
+	font-size: 40px;
+/*	position: absolute;
+*/	z-index: 2;
 	top: 0;
 }
 
@@ -24,6 +24,21 @@ i.fa.fa-compass {
 	cursor: pointer;
 	font-size: 65px; 
 	display: inline-block;
+}
+
+#welcome {
+	background-image: url('../images/homemap-background.jpg');
+	width: 70%;
+	margin: 50px auto;
+	padding: 120px 60px;
+	text-align: center;
+	height: 200px;
+	background-size: cover;
+}
+
+#welcome p {
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px;
 }
 
 body {
@@ -70,15 +85,6 @@ body {
     top: 20px;
     right: 45px;
     font-size: 60px;
-}
-
-@media screen and (max-height: 450px) {
-    .navoverlay a {font-size: 20px}
-    .navoverlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
 }
 
 .hidden {
@@ -220,4 +226,34 @@ div#baseimg {
 	border-style: dashed;
 	border-width: 3px;
 	left: 3%;
+}
+
+
+@media screen and (max-height: 450px) {
+    .navoverlay a {font-size: 20px}
+    .navoverlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+	.halfcontainer {
+		width: 100%;
+	}
+	img {
+		max-height: 600px;
+		max-width: 250px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	h1 {
+		font-size: 45px;
+	}
+	i.fa.fa-compass {
+		font-size: 40px; 
+	}
+
 }
