@@ -1,20 +1,24 @@
 <div ng-controller="keyboardController" class="content">
 	<div class="window">
 		<h3>{{ title }}</h3>
+	    <div class="halfcontainer">
 
-		<div id="keyboardDisplay" class="center">
- 			<div class="keyboardButtons" id="blackKeys" ng-init="enharmonics=['C#', 'D#']">
- 				<button ng-repeat='enharmonic in enharmonickeys' class="{{ instrument }}-note-buttons note-buttons enharmonic {{ enharmonic.space }}" id="button-{{ instrument }}-{{ enharmonic.name }}"><p>{{ enharmonic.name }}</p><p>{{ enharmonic.altname }}</p></button>
+			<div id="keyboardDisplay">
+	 			<div class="keyboardButtons" id="blackKeys">
+	 				<button ng-repeat='enharmonic in enharmonickeys' class="{{ instrument }}-note-buttons note-buttons enharmonic {{ enharmonic.space }}" id="button-{{ instrument }}-{{ enharmonic.name }}"><p>{{ enharmonic.name }}</p><p>{{ enharmonic.altname }}</p></button>
+			    </div>
+			    <div class="keyboardButtons" id="whiteKeys">
+					<button ng-repeat='natural in naturalkeys' class="{{ instrument }}-note-buttons note-buttons natural" id="button-{{ instrument }}-{{ natural.name }}"><p>{{ natural.name }}</p></button>
+	 			</div>
 		    </div>
-		    <div class="keyboardButtons" id="whiteKeys">
-				<button ng-repeat='natural in naturalkeys' class="{{ instrument }}-note-buttons note-buttons natural" id="button-{{ instrument }}-{{ natural.name }}"><p>{{ natural.name }}</p></button>
- 			</div>
 	    </div>
-	    <div ng-controller="keyboardController" id="instrument-display" class="center">
-	    	<div id="baseimg">
-				<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-base.png" class="base" />
- 				<img ng-repeat='enharmonic in enharmonickeys' ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-{{ enharmonic.writename }}.png" id="img-{{ instrument }}-{{ enharmonic.writename }}" class="overlay hidden" />
- 				<img ng-repeat='natural in naturalkeys' ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-{{ natural.name }}.png" id="img-{{ instrument }}-{{ natural.name }}" class="overlay hidden" />			</div>
+	    <div class="halfcontainer">
+		    <div ng-controller="keyboardController" id="instrument-display">
+		    	<div id="baseimg">
+					<img ng-src="./assets/images/{{ instrument }}/{{ instrument }}-base.png" class="base" />
+	 				<img ng-repeat='enharmonic in enharmonickeys' ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-{{ enharmonic.writename }}.png" id="img-{{ instrument }}-{{ enharmonic.writename }}" class="overlay hidden" />
+	 				<img ng-repeat='natural in naturalkeys' ng-src="./assets/images/{{ instrument }}/{{ instrument }}-note-{{ natural.name }}.png" id="img-{{ instrument }}-{{ natural.name }}" class="overlay hidden" />			</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 h1 {
 	font-family: 'Amatic SC', cursive;
-	font-size: 60px;
+	font-size: 75px;
 	display: inline-block;
 }
 
@@ -15,11 +15,14 @@ h2#menu {
 h3 {
 	font-family: 'Great Vibes', cursive;
 	font-size: 30px;
+	position: absolute;
+	z-index: 2;
+	top: 0;
 }
 
 i.fa.fa-compass {
 	cursor: pointer;
-	font-size: 60px; 
+	font-size: 65px; 
 	display: inline-block;
 }
 
@@ -86,21 +89,35 @@ body {
 	width: 45%;
 	float: left;
 }
+
+.halfcontainer {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+/*	height: 80vh;
+*/}
 .window {
 	padding: 20px;
 	background-color: lightyellow;
-	overflow: auto;
-	width: 90%;
 	margin: auto;
+	position: relative;
+	display: table;
+	width: 90%;
+	height: 80vh;
 }
 
 #keyboardDisplay {
+	box-sizing: border-box;
 	background-color: lightgreen;
 	padding: 35px 10px 20px 10px;
+	width: 60%;
 	overflow: auto;
 	position: relative;
-	height: 100px;
+	height: auto;
 	white-space: nowrap;
+	display: inline-block;
+	vertical-align: top;
 }
 
 #whiteKeys {
@@ -172,17 +189,11 @@ li {
 }
 
 #instrument-display {
-/*	margin: auto;
-	width: 50%;
-	height: auto;
-	border-style: dotted;
-	border-width: 3px;
-	position: relative;*/
-	background-color: lightblue;
 	overflow: auto;
 	position: relative;
-	max-width: 400px;
 	margin: auto;
+	display: inline-block;
+	box-sizing: border-box;
 }
 
 img.overlay {
@@ -191,6 +202,10 @@ img.overlay {
 	left: 0;
 }
 
+img {
+	max-height: 600px;
+	max-width: 100%;
+}
 /*img.overlay {
 	position: absolute;
 }
