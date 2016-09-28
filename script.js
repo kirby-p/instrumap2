@@ -1,30 +1,35 @@
-var app = angular.module('instrumentApp', ['ngRoute', 'angularLoad']);
+var app = angular.module('instrumentApp', ['auth0.lock', 'angular-jwt', 'ngRoute', 'angularLoad']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, lockProvider) {
+
+	lockProvider.init ({
+		clientID: 'wSOdfiXI43WyKI1bWL8i8pu0HNuZmaJV',
+		domain: 'kirbyp.auth0.com'
+	});
+
 	$routeProvider
 		.when('/', {
-			templateUrl : 'pages/home.html',
-			controller 	: 'mainController'
+			templateUrl : 'app/pages/home/home.html',
+			controller 	: 'homeController'
+		})
+
+		.when('/login', {
+			templateUrl: 'app/pages/login/login.html',
+			controller: 'loginController'
 		})
 
 		.when('/clarinet', {
-			templateUrl : 'pages/basic-template.html',
+			templateUrl : 'app/pages/basic-template.html',
 			controller 	: 'clarinetController',
 		})
 
 		.when('/trumpet', {
-			templateUrl : 'pages/basic-template.html',
+			templateUrl : 'app/pages/basic-template.html',
 			controller 	: 'trumpetController'
 		})
 });
 
-// function MainCtrl($scope, $location) {
-// 	$scope.setRoute = function(route) {
-// 		$location.path(route);
-// 	}
-// }
-
-app.controller('mainController', function($scope) {
+app.controller('homeController', function($scope) {
 	$scope.title = 'Home';
 	$scope.message = 'Welcome to Instrumap!  This is an interactive tool and central location for beginning musicians to find fingering charts for their instrument.';
 	$scope.instructions = 'Click on the compass above to search for your instrument.  Then select the note on the keyboard for the fingering you would like to learn.';

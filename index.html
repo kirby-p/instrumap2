@@ -2,6 +2,10 @@
 <html lang="en" ng-app="instrumentApp">
   <head>
     <meta charset="utf-8">
+
+    <!-- Meta tag to set viewport for Lock widget -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <title>Instrumap</title>
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>    
@@ -20,7 +24,7 @@
     <script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
 
   </head>
-  <body ng-controller="mainController">
+  <body ng-controller="homeController">
     <div id="header">
       <h1>Instrumap</h1>
       <i class="fa fa-compass" aria-hidden="true" onclick="openNav()"></i>
