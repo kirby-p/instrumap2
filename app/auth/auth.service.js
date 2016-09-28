@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('app')
+    .module('instrumentApp')
     .service('authService', authService);
 
   authService.$inject = ['$rootScope', 'lock', 'authManager'];

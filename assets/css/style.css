@@ -29,7 +29,7 @@ i.fa.fa-compass {
 #welcome {
 	background-image: url('../images/homemap-background.jpg');
 	width: 70%;
-	margin: 50px auto;
+	margin: 0 auto 50px;
 	padding: 120px 60px;
 	text-align: center;
 	height: 200px;
@@ -37,8 +37,8 @@ i.fa.fa-compass {
 }
 
 #welcome p {
-	font-family: 'Amatic SC', cursive;
-	font-size: 40px;
+	font-family: 'Raleway', sans-serif;	
+	font-size: 25px;
 }
 
 body {

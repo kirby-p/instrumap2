@@ -11,6 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>    
     <link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>    
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="/node_modules/angular/angular.js"></script>
     <script src="/node_modules/angular-route/angular-route.js"></script>
@@ -29,6 +30,9 @@
       <h1>Instrumap</h1>
       <i class="fa fa-compass" aria-hidden="true" onclick="openNav()"></i>
     </div>
+    <div id="login">
+      <button class="btn btn-primary" ng-click="authService.login()">Log In</button>  
+    </div>
     <div id="instrumapNav" class="navoverlay">
        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -42,10 +46,11 @@
     <div id="main">
       <div ng-view></div>
     </div> 
-    <script src="script.js"></script> 
+    <script src="app.js"></script> 
     <script src="node_modules/angular-load/angular-load.js"></script> 
 
     <script type="text/javascript" src="app/pages/home/home.controller.js"></script>
+    <script type="text/javascript" src="app/pages/login/login.controller.js"></script>
     <script type="text/javascript" src="app/pages/keyboard.controller.js"></script>
     <script type="text/javascript" src="app/pages/clarinet/clarinet.controller.js"></script>
     <script type="text/javascript" src="app/pages/trumpet/trumpet.controller.js"></script>
